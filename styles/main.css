@@ -35,3 +35,13 @@ header {
 footer {
   margin-top :0;
 }
+
+a {
+  color: rgba(155, 140, 103, 1);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
