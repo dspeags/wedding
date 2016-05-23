@@ -27,3 +27,11 @@ main,
 footer {
   margin: 1in;
 }
+
+header {
+  margin-bottom: 0;
+}
+
+footer {
+  margin-top :0;
+}
