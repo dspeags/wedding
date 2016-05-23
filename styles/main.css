@@ -9,10 +9,7 @@ html {
 }
 
 body {
-  background-color: rgba(31, 35, 36, 1);
-  color: rgba(240, 246, 247, 1);
   display: flex;
-  font-family: sans-serif;
   flex-direction: column;
   margin: 0;
   min-height: 100vh;
@@ -37,7 +34,6 @@ footer {
 }
 
 a {
-  color: rgba(155, 140, 103, 1);
   text-decoration: none;
 }
 
