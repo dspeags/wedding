@@ -15,7 +15,8 @@ header > a {
 h1,
 h2,
 h3 {
-  font-family: 'GFS Didot', serif;
+  font-family: 'Cormorant', serif;
+  font-weight: 300;
 }
 
 h1 {
@@ -27,6 +28,7 @@ h1 > small {
   background-color: rgba(0, 0, 0, 1);
   color: rgba(255, 255, 255, 1);
   display: inline-block;
+  font-family: 'Proxima Nova', sans-serif;
   padding-left: 6px;
   letter-spacing: 6px;
 }
