@@ -1,13 +1,13 @@
 main {
   align-items: flex-start;
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
 }
 
 main > * {
-  text-align: center;
   margin: 0 auto;
+  text-align: center;
 }
 
 h2 {
