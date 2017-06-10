@@ -8,6 +8,12 @@
     <link href="styles/font-stack.css" rel="stylesheet">
     <link href="styles/theme.css" rel="stylesheet">
     <link href="styles/nav.css" rel="stylesheet">
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
   </head>
   <body>
     <header>
@@ -21,12 +27,26 @@
       </nav>
     </header>
     <main>
-      <p>
-        Coming soon.
-      </p>
+      <div id="map"></div>
     </main>
     <footer>
       Copyright © 2017 Andrew McWatters
     </footer>
+    <script>
+      function initMap() {
+        var ocotilloGolfResort = {lat: 33.2514966, lng: -111.8731004};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: ocotilloGolfResort
+        });
+        var marker = new google.maps.Marker({
+          position: ocotilloGolfResort,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGXHlM2Zh8MRc04Vh1Cr0fFWDI0FiSOWI&callback=initMap">
+    </script>
   </body>
 </html>
