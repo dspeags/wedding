@@ -33,9 +33,8 @@ nav a:hover {
   }
 }
 
-nav a:hover::after {
-  animation-duration: 400ms;
-  animation-name: expand;
+nav a:hover::after,
+nav li.active a::after {
   background-color: rgba(0, 0, 0, 1);
   content: '';
   display: block;
@@ -44,6 +43,15 @@ nav a:hover::after {
   position: relative;
   top: 2px;
   width: 100%;
+}
+
+nav a:hover::after {
+  animation-duration: 400ms;
+  animation-name: expand;
+}
+
+nav li.active a::after {
+  animation-name: none;
 }
 
 h1,
