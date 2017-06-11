@@ -13,6 +13,7 @@ main > * {
 h1 {
   font-size: 1.5em;
   text-transform: uppercase;
+  position: relative;
 }
 
 h2 {
@@ -26,6 +27,11 @@ h2 {
   h2 {
     line-height: 0.66em;
   }
+}
+
+.bride,
+.groom {
+  position: relative;
 }
 
 h2 > small {
