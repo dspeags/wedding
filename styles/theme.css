@@ -21,12 +21,12 @@ a {
 }
 
 nav {
-  font-size: 18px;
   text-align: center;
 }
 
 @media (min-width: 544px) {
   nav {
+    font-size: 18px;
     text-align: left;
   }
 }
