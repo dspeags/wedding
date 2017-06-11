@@ -8,7 +8,7 @@ main > * {
 }
 */
 .wedgewood {
-  background-image: url('/images/WW-logo-bcrfcure.png');
+  background-image: url('../images/WW-logo-bcrfcure.png');
   background-position: center;
   width: 456px;
   height: 157px;
