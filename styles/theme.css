@@ -23,17 +23,7 @@ header > a {
 }
 
 h1,
-h2,
-h3 {
+h2 {
   font-family: 'Cormorant', serif;
   font-weight: 300;
-}
-
-h1 {
-  font-size: 1.5em;
-  text-transform: uppercase;
-}
-
-h2 {
-  font-size: 4em;
 }

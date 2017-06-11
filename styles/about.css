@@ -10,7 +10,13 @@ main > * {
   text-align: center;
 }
 
+h1 {
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
 h2 {
+  font-size: 4em;
   line-height: 1em;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
