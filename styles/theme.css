@@ -3,6 +3,18 @@ body {
   font-weight: 100;
 }
 
+.background {
+  background-image: url('/images/ocotillo_golf20-lrg.jpg');
+  background-position: center;
+  background-size: cover;
+  filter: blur(36px) grayscale(25%) opacity(25%);
+  height: 100vh;
+  position: fixed;
+  transform: translate3d(0, 0, 0);
+  width: 100vw;
+  z-index: -1;
+}
+
 a {
   color: rgba(0, 0, 0, 1);
   position: relative;
