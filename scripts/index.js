@@ -1,20 +1,24 @@
 'use strict';
 
-var h1          = document.querySelector('h1');
-var bride       = document.querySelector('.bride');
-var and         = document.querySelector('small');
-var groom       = document.querySelector('.groom');
-var saveTheDate = document.querySelector('a[href="savethedate"]');
+var $           = document.querySelector.bind(document);
+var h1          = $('h1');
+var bride       = $('.bride');
+var and         = $('small');
+var nullSpan    = $('.null');
+var groom       = $('.groom');
+var saveTheDate = $('a[href="savethedate"]');
 var header      = [ h1, bride, and, groom, saveTheDate ];
+
 for (var i = 0; i < header.length; i++) {
   header[i].style.opacity = 0;
   header[i].style.top = '72px';
   header[i].style.filter = 'blur(36px)';
 }
 
-var nav      = document.querySelector('nav');
-var footer   = document.querySelector('footer');
-var other    = [ nav, footer ];
+var nav    = $('nav');
+var footer = $('footer');
+var other  = [ nav, footer ];
+
 for (var i = 0; i < other.length; i++) {
   other[i].style.opacity = 0;
 }
@@ -24,10 +28,14 @@ tl.staggerTo(header, 4, {
   opacity: 1,
   ease: Expo.easeOut
 }, 0.2 );
-tl.staggerTo(header, 1, {
+tl.staggerTo([ h1, bride, nullSpan, groom, saveTheDate ], 1, {
   filter: 'blur(0px)',
-  top: 0
-}, 0.2, '-=5' );
+  top: '0',
+}, 0.2, '-=5');
+tl.to(and, 1, {
+  filter: 'blur(0px)',
+  top: '0.17em'
+}, '-=4.6');
 tl.to(other, 4, {
   opacity: 1,
   ease: Expo.easeOut
