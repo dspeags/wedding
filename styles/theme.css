@@ -5,6 +5,7 @@ body {
 
 a {
   color: rgba(0, 0, 0, 1);
+  position: relative;
 }
 
 nav {
@@ -17,9 +18,31 @@ nav {
   }
 }
 
-header > a {
-  display: inline-block;
-  margin-bottom: 0.5in;
+nav a:hover {
+  text-decoration: none;
+}
+
+@keyframes expand {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+nav a:hover::after {
+  animation-duration: 400ms;
+  animation-name: expand;
+  background-color: rgba(0, 0, 0, 1);
+  content: '';
+  display: block;
+  height: 2px;
+  margin: -2px auto 0;
+  position: relative;
+  top: 2px;
+  width: 100%;
 }
 
 h1,
