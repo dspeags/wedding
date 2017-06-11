@@ -7,6 +7,16 @@ a {
   color: rgba(0, 0, 0, 1);
 }
 
+nav {
+  text-align: center;
+}
+
+@media (min-width: 544px) {
+  nav {
+    text-align: left;
+  }
+}
+
 header > a {
   display: inline-block;
   margin-bottom: 0.5in;
