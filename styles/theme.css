@@ -9,7 +9,9 @@ body {
   background-size: cover;
   filter: blur(36px) grayscale(25%) opacity(25%);
   height: 100vh;
+  left: 0;
   position: fixed;
+  top: 0;
   transform: translate3d(0, 0, 0);
   width: 100vw;
   z-index: -1;
