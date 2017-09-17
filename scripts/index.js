@@ -6,8 +6,8 @@ var bride       = $('.bride');
 var and         = $('small');
 var nullSpan    = $('.null');
 var groom       = $('.groom');
-var saveTheDate = $('a[href="savethedate"]');
-var header      = [ h1, bride, and, groom, saveTheDate ];
+var rsvp        = $('a[href="rsvp"]');
+var header      = [ h1, bride, and, groom, rsvp ];
 
 for (var i = 0; i < header.length; i++) {
   header[i].style.opacity = 0;
@@ -28,7 +28,7 @@ tl.staggerTo(header, 4, {
   opacity: 1,
   ease: Expo.easeOut
 }, 0.2 );
-tl.staggerTo([ h1, bride, nullSpan, groom, saveTheDate ], 1, {
+tl.staggerTo([ h1, bride, nullSpan, groom, rsvp ], 1, {
   filter: 'blur(0px)',
   top: '0',
 }, 0.2, '-=5');
