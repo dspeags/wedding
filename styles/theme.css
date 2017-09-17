@@ -84,6 +84,10 @@ sup {
   top: 3px;
 }
 
+.text-secondary {
+  color: #868e96;
+}
+
 .card {
   margin-bottom: calc(0.5in + 0.67em);
 }
