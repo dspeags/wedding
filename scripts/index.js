@@ -6,7 +6,7 @@ var bride       = $('.bride');
 var and         = $('small');
 var nullSpan    = $('.null');
 var groom       = $('.groom');
-var rsvp        = $('a[href="rsvp"]');
+var rsvp        = $('.rsvp');
 var header      = [ h1, bride, and, groom, rsvp ];
 
 for (var i = 0; i < header.length; i++) {
