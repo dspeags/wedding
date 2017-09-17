@@ -22,12 +22,86 @@
       </nav>
     </header>
     <main>
-      <p>
-        Coming soon.
-      </p>
+      <div class="background">
+      </div>
+      <h1>
+        RSVP
+      </h1>
+      <form class="card" onsubmit="return onSubmit.bind(this)(event);">
+        <div class="card-border" style="width: 262px;">
+          <fieldset disabled>
+            <p>
+              <label class="h2">
+                Guest
+              </label><br>
+              <input
+                type="text"
+                name="name"
+                placeholder="Full name"
+                required>
+            </p>
+            <p>
+              <label class="h3">
+                Will you be attending?
+              </label><br>
+              <label>
+                <input
+                  type="radio"
+                  name="response"
+                  value="true"
+                  onchange="return onResponseChange.bind(this)(event);"
+                  required>
+                Yes
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="response"
+                  value="false"
+                  onchange="return onResponseChange.bind(this)(event);">
+                No
+              </label>
+            </p>
+            <p id="party_count" class="d-none">
+              <label class="h3">
+                Number of attendees in your party
+              </label><br>
+              <select
+                name="party_count"
+                onchange="return onPartyCountChange.bind(this)(event);">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </p>
+            <p id="attendees[]" class="d-none">
+              <label class="h3">
+                Additional attendees
+              </label><br>
+            </p>
+            <input type="submit">
+          </fieldset>
+        </div>
+      </form>
     </main>
     <footer class="text-secondary">
       Copyright © 2017 Andrew McWatters
     </footer>
+    <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyD0AWfDIJQyoFiQkxhcylLb-3QS_mjrCFg",
+        authDomain: "wedding-1497128490336.firebaseapp.com",
+        databaseURL: "https://wedding-1497128490336.firebaseio.com",
+        projectId: "wedding-1497128490336",
+        storageBucket: "wedding-1497128490336.appspot.com",
+        messagingSenderId: "380164077126"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="scripts/rsvp.js"></script>
   </body>
 </html>
