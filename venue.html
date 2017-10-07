@@ -49,7 +49,11 @@
             <a href="tel:+18669663009">+1 (866) 966-3009</a>
           </p>
           <p>
-            <a href="http://www.wedgewoodbanquet.com/wedding-venue/Ocotillo-Golf-Resort" target="_blank">wedgewoodbanquet.com/wedding-venue/Ocotillo-Golf-Resort</a>
+            <a
+              href="http://www.wedgewoodbanquet.com/wedding-venue/Ocotillo-Golf-Resort"
+              target="_blank">
+              wedgewoodbanquet.com/wedding-venue/Ocotillo-Golf-Resort
+            </a>
           </p>
           <address>
             3751 S Clubhouse Dr<br>
@@ -76,6 +80,11 @@
         var marker = new google.maps.Marker({
           position: ocotilloGolfResort,
           map: map
+        });
+        google.maps.event.addDomListener(window, "resize", function() {
+          var center = map.getCenter();
+          google.maps.event.trigger(map, "resize");
+          map.setCenter(center);
         });
       }
     </script>
