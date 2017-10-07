@@ -1,13 +1,13 @@
 'use strict';
 
-var $           = document.querySelector.bind(document);
-var h1          = $('h1');
-var bride       = $('.bride');
-var and         = $('small');
-var nullSpan    = $('.null');
-var groom       = $('.groom');
-var rsvp        = $('.rsvp');
-var header      = [ h1, bride, and, groom, rsvp ];
+var $        = document.querySelector.bind(document);
+var h1       = $('h1');
+var bride    = $('.bride');
+var and      = $('small');
+var nullSpan = $('.null');
+var groom    = $('.groom');
+var rsvp     = $('.rsvp');
+var header   = [ h1, bride, and, groom, rsvp ];
 
 for (var i = 0; i < header.length; i++) {
   header[i].style.opacity = 0;
