@@ -33,5 +33,23 @@ function onPartyCountChange() {
 }
 
 function onSubmit() {
+  var form       = this;
+  var name       = form.elements['name'].value;
+  var tel        = form.elements['tel'].value;
+  var attending  = form.elements['response'].value;
+  var partyCount = form.elements['party_count'].value;
+  var attendees  = [];
+  for (var element of form.elements) {
+    if (element.name === 'attendees[]') {
+      attendees.push(element.value);
+    }
+  }
+  firebase.database().ref('guests/' + name).set({
+    tel: tel,
+    attending: attending,
+    partyCount: partyCount,
+    attendees: attendees
+  });
+  alert('Thank you for your response.');
   return false;
 }
