@@ -33,7 +33,7 @@ function onPartyCountChange() {
   }
 }
 
-function onSubmit() {
+function onSubmit(event) {
   var form       = this;
   var name       = form.elements['name'].value;
   var tel        = form.elements['tel'].value;
@@ -52,5 +52,7 @@ function onSubmit() {
     attendees: attendees
   });
   alert('Thank you for your response.');
+
+  event.preventDefault();
   return false;
 }
