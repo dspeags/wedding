@@ -40,10 +40,9 @@ function onSubmit(event) {
   var attending  = form.elements['response'].value;
   var partyCount = form.elements['party_count'].value;
   var attendees  = [];
-  for (var property in form.elements) {
-    if (form.elements.hasOwnProperty(property) &&
-        form.elements[property].name === 'attendees[]') {
-      attendees.push(form.elements[property].value);
+  for (var i = 0; i < form.elements.length; i++) {
+    if (form.elements[i].name === 'attendees[]') {
+      attendees.push(form.elements[i].value);
     }
   }
   firebase.database().ref('guests/' + name).set({
