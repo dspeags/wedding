@@ -3,6 +3,7 @@
 var $          = document.querySelector.bind(document);
 var partyCount = $('[id="party_count"]');
 var attendees  = $('[id="attendees[]"]');
+var success    = $('[id="success"]');
 
 function onResponseChange() {
   if (this.value === 'true') {
@@ -51,7 +52,10 @@ function onSubmit(event) {
     partyCount: partyCount,
     attendees: attendees
   });
-  alert('Thank you for your response.');
+
+  var fieldset = form.elements[0];
+  fieldset.classList.add('d-none');
+  success.classList.remove('d-none');
 
   event.preventDefault();
   return false;
