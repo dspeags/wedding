@@ -41,7 +41,8 @@ function onSubmit(event) {
   var partyCount = form.elements['party_count'].value;
   var attendees  = [];
   for (var element in form.elements) {
-    if (form.elements.hasOwnProperty(element)) {
+    if (form.elements.hasOwnProperty(element) &&
+        element.name === 'attendees[]') {
       attendees.push(element.value);
     }
   }
