@@ -38,7 +38,7 @@ function onSubmit(event) {
   var form       = this;
   var name       = form.elements['name'].value;
   var tel        = form.elements['tel'].value;
-  var attending  = form.elements['response'].value;
+  var attending  = $('input[name="response"]:checked').value;
   var partyCount = form.elements['party_count'].value;
   var attendees  = [];
   for (var i = 0; i < form.elements.length; i++) {
