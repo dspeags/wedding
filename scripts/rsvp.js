@@ -56,3 +56,6 @@ function onSubmit(event) {
   event.preventDefault();
   return false;
 }
+
+var rsvp = document.forms['rsvp'];
+rsvp.addEventListener('submit', onSubmit);
