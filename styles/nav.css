@@ -1,8 +1,10 @@
 nav ol {
+  height: 39px;
   list-style-type: none;
   margin: 0;
-  overflow-x: scroll;
+  overflow-x: auto;
   padding-left: 0;
+  -webkit-overflow-scrolling: touch;
   white-space: nowrap;
 }
 
