@@ -1,5 +1,9 @@
 'use strict';
 
+Raven
+  .config('https://0469d50033d842e3a890758792b8c395@sentry.io/232050')
+  .install();
+
 var $          = document.querySelector.bind(document);
 var partyCount = $('[id="party_count"]');
 var attendees  = $('[id="attendees[]"]');
